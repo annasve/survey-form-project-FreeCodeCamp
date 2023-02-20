@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey form project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+ 
+<main>
+    <div id="intro">
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description"><em>Thank you for taking the time to help us improve
+        the platform</em></p>
+    </div>
+
+    <section class="formbox">
+    <form
+        id="survey-form"
+        class="form"
+        action="http://www.example.com"
+        method="POST">
+        <!-- -method POST hides inputs a bit 
+        x with the default method GET, inputs can be visible in the URL -->
+        
+        <div class="form-inner">
+            <!-- TEXT FIELD 1 -->
+            <label for="name" id="name-label">Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name" 
+                placeholder="Enter your name"
+                required>
+        </div>
+    
+        <div class="form-inner">
+            <!-- TEXT FIELD 2 -->
+            <label for="email" id="email-label">E-mail</label>
+            <input 
+                type="email"
+                id="email"
+                name="e-mail"
+                placeholder="Enter your e-mail"
+                required> 
+        </div>
+
+        <div class="form-inner">
+            <!-- TEXT FIELD 3 -->
+            <label for="age" id="number-label">Age (optional)</label>
+            <input
+                type="number"    
+                id="number"
+                name="age"
+                min="10"
+                max="130"
+                placeholder="10"
+                value="10">
+        </div>
+
+        <div class="form-inner">
+            <!-- DROPDOWN SELECTOR 1 -->
+            <label for="dropdown">Which option best describes your current role?</label>
+            <select id="dropdown" name="current-role">        
+                <option value="" disabled selected>Select current role</option>
+                <!-- thanks to [disabled] this option cannot be selected, it's grey
+                    thanks to [selected] the option is "chosen" by default - it's a kind of a hint
+                    for the user -->
+
+                <option value="student">Student</option>
+                <option value="fulltimejob">Full Time Job</option>
+                <option value="fulltimelearner">Full Time Learner</option>
+                <option value="prefernottosay">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-inner" id="radiogroup">
+            <!-- RADIOS -->
+            <label for="chooser-quest">Would you recommend freeCodeCamp to a friend?</label>
+            <!-- ("heading" common to all 3 radios) -->
+            
+            <div class="radio-option">
+                <input
+                type="radio"
+                id="definitely"
+                value="definitely"
+                name="choose-radio">
+                <label for="definitely">Definitely</label>
+            </div>
+
+            <div class="radio-option">
+                <input
+                type="radio"
+                id="maybe"
+                value="maybe"
+                name="choose-radio">
+                <label for="maybe">Maybe</label>
+            </div>
+
+            <div class="radio-option">
+                <input
+                type="radio"
+                id="not-sure"
+                value="notsure"
+                name="choose-radio">
+                <label for="not-sure">Not sure</label>
+            </div>
+        </div>
+    
+        <div class="form-inner">
+            <!-- DROPDOWN SELECTOR 2 -->
+            <label for="fav-feature">What is your favorite feature of freeCodeCamp?</label>
+            <select id="fav-feature" name="fav-feature">        
+                <option value="" disabled selected>Select an option</option>
+                <option value="challenges">Challenges</option>
+                <option value="projects">Projects</option>
+                <option value="community">Community</option>
+                <option value="opensource">Open Source</option>
+            </select>
+        </div>
+
+        <div class="form-inner" id="checkboxgroup">
+            <!-- CHECKBOXES -->
+            <label for="choosemore-quest">What would you like to see improved?
+                 <span style="font-size:smaller;">(Check all that apply)</span></label>
+            
+            <div class="checkbox-option">
+                <input
+                type="checkbox"
+                id="checkbox-1"
+                value="Frontend-Projects"
+                name="choose-checkbox">
+                <label for="checkbox-1">Front-end Projects</label>
+            </div>
+
+            <div class="checkbox-option">
+                <input
+                type="checkbox"
+                id="checkbox-2"
+                value="Backend-Projects"
+                name="choose-checkbox">
+                <label for="checkbox-2">Back-end Projects</label>
+            </div>
+
+            <div class="checkbox-option">
+                <input
+                type="checkbox"
+                id="checkbox-3"
+                value="Data-Visualization"
+                name="choose-checkbox">
+                <label for="checkbox-3">Data Visualization</label>
+             </div>
+
+            <div class="checkbox-option">
+                <input
+                type="checkbox"
+                id="checkbox-4"
+                value="Challenges"
+                name="choose-checkbox">
+                <label for="checkbox-4">Challenges</label>
+            </div>
+
+            <div class="checkbox-option">
+                <input
+                type="checkbox"
+                id="checkbox-5"
+                value="Open-Source-Community"
+                name="choose-checkbox">
+                <label for="checkbox-5">Open Source Community</label>
+            </div>
+
+            <div class="checkbox-option">
+                <input
+                type="checkbox"
+                id="checkbox-6"
+                value="Gitter-help-rooms"
+                name="choose-checkbox">
+                <label for="checkbox-6">Gitter help rooms</label>
+            </div>
+
+            <div class="checkbox-option">
+                <input
+                type="checkbox"
+                id="checkbox-7"
+                value="Videos"
+                name="choose-checkbox">
+                <label for="checkbox-7">Videos</label>
+            </div>
+
+            <div class="checkbox-option">
+                <input
+                type="checkbox"
+                id="checkbox-8"
+                value="City-Meetups"
+                name="choose-checkbox">
+                <label for="checkbox-8">City Meetups</label>
+            </div>
+
+            <div class="checkbox-option">
+                <input
+                type="checkbox"
+                id="checkbox-9"
+                value="Wiki"
+                name="choose-checkbox">
+                <label for="checkbox-9">Wiki</label>
+            </div>
+
+            <div class="checkbox-option">
+                <input
+                type="checkbox"
+                id="checkbox-10"
+                value="Forum"
+                name="choose-checkbox">
+                <label for="checkbox-10">Forum</label>
+            </div>  
+
+            <div class="checkbox-option">
+                <input
+                type="checkbox"
+                id="checkbox-11"
+                value="Additional-Courses"
+                name="choose-checkbox">
+                <label for="checkbox-11">Additional Courses</label>
+            </div>
+        </div> <!-- checkboxgroup ends here-->
+        
+        <div class="form-inner">
+            <!-- TEXTAREA -->
+            <label for="textarea">Any comments or suggestions?</label>
+            <textarea
+                id="textarea-opinion"
+                name="write-your-message"
+                rows="5"
+                cols="65">Enter your comment here...
+            </textarea>
+                <!-- rows and cols usually determine the overall size of the textarea -->
+
+        </div> <!--the end of textarea-->
+
+        <div class="form-inner">
+            <!-- SUBMIT BUTTON -->
+            <input
+            id="submit"
+            type="submit"
+            value="Submit">
+        </div>
+         <!-- the end of the submit buttonu -->
+
+
+        <div class="form-inner" id="reset">
+            <!-- RESET BUTTON - for testing purposes -->
+            <input
+                type="reset"
+                value="reset">
+                <!-- type="reset" resets all the fields in the form to the default state -->
+        </div> <!--the end of reset-->
+
+    </form>
+    </section>
+</main>
+</body>
+</html>

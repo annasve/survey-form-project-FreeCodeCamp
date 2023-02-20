@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: rgb(55, 55, 55);
+  }
+  
+#intro{
+  text-align: center; 
+  margin: 25px 0px;
+}
+ 
+
+  .formbox{
+    background: mintcream;
+    max-width: 700px;
+    margin: 20px auto;
+    border: 3px solid lightgrey;
+    border-radius: 10px;
+  }
+
+  .form-inner{
+    margin: 10px auto;
+    width: 500px;
+    line-height: 1.6rem;
+  }
+
+  label{
+    display: block;
+    /* label is inline by default and here
+     it needs to be on the line above the field it describes */
+  }
+
+
+  #radiogroup label{
+    display: inline;
+  }
+
+  #checkboxgroup label{
+    display: inline;
+  }
+
+  #radiogroup > *{
+    display: block;
+  }
+
+  #checkboxgroup > *{
+    display: block;
+  }
+
+  #textarea-opinion{
+    resize: vertical;
+    overflow: auto;
+  }
+  /* such setup allows the user to make the textarea 
+  smaller/bigger only to the left or to the right, not in the up-down direction */
+
+#submit{
+  background: #8FC9A3;
+  font-weight: bold;
+  color: white;
+  padding: 10px 0;
+  width: 300px;
+}
